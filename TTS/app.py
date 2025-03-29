@@ -7,7 +7,7 @@ import torch
 
 CUDA_AVAILABLE = torch.cuda.is_available()
 models = {gpu: KModel().to('cuda' if gpu else 'cpu').eval() for gpu in [False] + ([True] if CUDA_AVAILABLE else [])}
-pipelines = {lang_code: KPipeline(lang_code=lang_code, model=False) for lang_code in 'ab'}
+pipelines = {lang_code: KPipeline(lang_code=lang_code, model=False) for lang_code in 'abj'}
 pipelines['a'].g2p.lexicon.golds['kokoro'] = 'kˈOkəɹO'
 pipelines['b'].g2p.lexicon.golds['kokoro'] = 'kˈQkəɹQ'
 

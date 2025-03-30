@@ -1,5 +1,5 @@
 git+https://github.com/huggingface/transformers
 torch
 yt-dlp
-gradio==5.23.1
+gradio==3.38.0
 ffmpeg
